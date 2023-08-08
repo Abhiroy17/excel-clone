@@ -1,0 +1,11 @@
+{
+  "name": "excel-clone",
+  "version": "1.0.0",
+  "description": "excel clone web application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhijit Roy",
+  "license": "ISC"
+}
