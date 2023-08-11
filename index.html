@@ -57,14 +57,36 @@
       <div class="sheet-title">Book 1 - Excel</div>
     </div>
     <div class="menu-bar">
-      <div class="menu-action"><a href="">File</a></div>
-      <div class="menu-action"><a href="#">Home</a></div>
-      <div class="menu-action"><a href="#">Insert</a></div>
-      <div class="menu-action"><a href="#">Draw</a></div>
-      <div class="menu-action"><a href="#">Page Layout</a></div>
-      <div class="menu-action"><a href="#">Formulas</a></div>
-      <div class="menu-action"><a href="#">Help</a></div>
+      <div class="menu-action">File</div>
+      <div class="menu-action menu-action-active">Home</div>
+      <div class="menu-action">Insert</div>
+      <div class="menu-action">Draw</div>
+      <div class="menu-action">Page Layout</div>
+      <div class="menu-action">Formulas</div>
+      <div class="menu-action">Help</div>
+      
     </div>
+    <div class="menu-action-container">
+        <div class="file-container hidden"></div>
+        <div class="home-container">
+            <select name="fonts" id="font">
+                <option value="calibri">Calibri</option>
+                <option value="calibri">Calibri</option>
+                <option value="calibri">Calibri</option>
+                <option value="calibri">Calibri</option>
+                <option value="calibri">Calibri</option>
+                <option value="calibri">Calibri</option>
+            </select>
+            <select name="font-size" id="font-size">
+                <option value="8">8</option>
+            </select>
+        </div>
+        <div class="insert-container hidden"></div>
+        <div class="draw-container hidden"></div>
+        <div class="layout-container hidden"></div>
+        <div class="formulas-container hidden"></div>
+        <div class="help-container hidden"></div>
+      </div>
     <div class="action-bar">
       <div class="copy-bar"></div>
       <div class="format-box"></div>
