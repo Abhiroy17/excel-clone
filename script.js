@@ -2,11 +2,11 @@ const menuBar = document.querySelector(".menu-bar");
 const menuActions = document.querySelectorAll(".menu-action");
 const svgs = document.querySelectorAll("svg");
 const fontSelector = document.querySelector(".font-style-selected");
-const ROW_SIZE = 100;
-const COLUMN_SIZE = 26;
+const ROW_SIZE = 50;
+const COLUMN_SIZE = 60;
 let rowContainer = document.querySelector(".row-name-container");
 let columnContainer = document.querySelector(".column-name-container");
-
+let cellsCont = document.querySelector(".column-cell-container");
 svgs.forEach((svg)=>{
   svg.classList.add("svg-fill")
 })
@@ -36,3 +36,22 @@ for(let i = 1 ; i <= COLUMN_SIZE; i++){
     columnContainer.appendChild(column);
 }
 
+
+for (let i = 0; i < ROW_SIZE; i++) {
+  let rowCont = document.createElement("div");
+  rowCont.setAttribute("class", "row-cont");
+  for (let j = 0; j < COLUMN_SIZE; j++) {
+    let cell = document.createElement("div");
+    cell.setAttribute("class", "cell");
+    cell.setAttribute("contenteditable", "true");
+    cell.setAttribute("spellcheck", "false");
+
+    // Attributes for cell and storage identification
+    cell.setAttribute("rid", i);
+    cell.setAttribute("cid", j);
+
+    rowCont.appendChild(cell);
+    //addListenerForAddressBarDisplay(cell, i, j);
+  }
+  cellsCont.appendChild(rowCont);
+}
