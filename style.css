@@ -306,11 +306,12 @@ select:focus {
   border-bottom: 1px solid var(--neutral-400);
   border-right: 1px solid var(--neutral-400);
   background-color: var(--neutral-300);
-  z-index: 4;
+  z-index: 100;
 }
 .column-name-container {
   display: flex;
   position: sticky;
+  z-index: 30;
   top: 0;
   left: 1.75rem;
   background-color: var(--neutral-300);
@@ -320,11 +321,12 @@ select:focus {
   position: sticky;
   outline: none;
   background-color: var(--neutral-300);
-  
+  display: inline-block;
+  z-index: 20;
   position: sticky;
   left: 0;
   top: 1.5rem;
-  border-right: 1px solid var(--neutral-400);
+  /* border-right: 1px solid var(--neutral-400); */
 }
 .row-address {
   width: 1.75rem;
@@ -350,7 +352,7 @@ select:focus {
 }
 .column-address {
   display: flex;
-  width: 4rem;
+  width: 5rem;
   height: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -362,12 +364,27 @@ select:focus {
 }
 .row-cont {
   display: flex;
-  background-color: white;
+  background-color: white; 
+}
+.rows-container{
+  position: sticky;
+  left: 1.75rem;
+  top : 1.5rem;
 }
 .cell {
   height: 1.5rem;
-  width: 4rem;
+  width: 5rem;
   border-bottom: 1px solid #dfe4ea;
   border-right: 1px solid #dfe4ea;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: .125rem;
 }
+.cell-active{
+  border: 2px solid var(--primary-theme) ;
+}
+/* .cell:focus{
+  outline: 2px solid var(--primary-theme) ;
+} */
